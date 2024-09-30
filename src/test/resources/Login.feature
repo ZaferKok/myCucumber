@@ -9,6 +9,6 @@ Feature: Login islemi
     And kulllanici sifresi girilir "<sifre>"
     Then login buton tiklanir
     Examples:
-    | kullaniciAdi  | sifre |
+    | username  | password |
     | erdemTatli123 | 54ab21|
     | yusufOlmez    | 36ab21|
