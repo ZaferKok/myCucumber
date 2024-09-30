@@ -6,6 +6,8 @@ import io.cucumber.java.en.When;
 
 public class LoginSteps {
 
+    LoginPage loginPage = new LoginPage();
+
     @Given("the user is on the login page")
     public void theUserIsOnTheLoginPage() {
        driver.get("https://example.com/login");
@@ -13,12 +15,12 @@ public class LoginSteps {
     
     @When("the user enters valid username {string}")
     public void theUserEntersValidUsername(String username) {
-       usernameBox.sendKeys(username);
+       loginPage.usernameBox.sendKeys(username);
     }
 
     @And("the user enters valid password {string}")
     public void theUserEntersValidPassword(String password) {
-       passwordBox.sendKeys(password);
+       loginPage.passwordBox.sendKeys(password);
     }
 
     @Then("the user is redirected to the homepage {string}")
