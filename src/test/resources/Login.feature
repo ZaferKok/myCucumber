@@ -1,14 +1,16 @@
-Feature: Login islemi
+Feature: Login
 
-  Background:
-    Given login sayfasi
+  Background: Default repeated steps
+    Given the user is on the login page
 
-  @ucuncu
-  Scenario Outline: ayni sayfada hem Scenario hem de Scenario Outline kullanabiliriz
-    When kullanici adi girilir "<kullaniciAdi>"
-    And kulllanici sifresi girilir "<sifre>"
-    Then login buton tiklanir
+  @regression
+  @smoke
+  Scenario Outline: Successful login with valid credentials
+    When the user enters valid username "<username>"
+    And the user enters valid password "<password>"
+    Then the user is redirected to the homepage
+    
     Examples:
-    | username  | password |
-    | erdemTatli123 | 54ab21|
-    | yusufOlmez    | 36ab21|
+    | username      | password |
+    | johnWick04    | 54ab21#:&|
+    | superman99    | (=)>36ab2|
