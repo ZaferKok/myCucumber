@@ -18,7 +18,7 @@ import org.junit.runner.RunWith;
 
             features = "src/test/resources",
             glue = "stepdefinitions",
-            tags = "@smoke", // Keyword Driven Testing // "@birinci and @ikinci" => is possible
+            tags = "@smoke", // Keyword Driven Testing // "@regression and @smoke" => is possible
             dryRun = false
     )
 
