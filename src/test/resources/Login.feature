@@ -8,7 +8,7 @@ Feature: Login
   Scenario Outline: Successful login with valid credentials
     When the user enters valid username "<username>"
     And the user enters valid password "<password>"
-    Then the user is redirected to the homepage
+    Then the user is redirected to the homepage "<username>"
     
     Examples:
     | username      | password |
