@@ -4,7 +4,6 @@ import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
 import org.junit.runner.RunWith;
 
-
     @RunWith(Cucumber.class)
     @CucumberOptions(
 
@@ -19,10 +18,8 @@ import org.junit.runner.RunWith;
 
             features = "src/test/resources",
             glue = "stepdefinitions",
-            tags = "@dbQuery", // Keyword Driven Testing // "@birinci and @ikinci" seklindede kullanilabilir. or ya da and olabilir.
+            tags = "@smoke", // Keyword Driven Testing // "@birinci and @ikinci" => is possible
             dryRun = false
-
-
     )
 
     public class Runner {
